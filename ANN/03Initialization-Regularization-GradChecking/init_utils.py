@@ -47,7 +47,7 @@ def compute_loss(a3, Y):
     """
     
     m = Y.shape[1]
-    logprobs = np.multiply(-np.log(a3),Y) + np.multiply(-np.log(1 - a3), 1 - Y)
+    logprobs = np.multiply(-np.log(a3), Y) + np.multiply(-np.log(1 - a3), 1 - Y)
     loss = 1./m * np.nansum(logprobs)
     
     return loss
@@ -79,7 +79,7 @@ def forward_propagation(X, parameters):
     W3 = parameters["W3"]
     b3 = parameters["b3"]
     
-    # LINEAR -> RELU -> LINEAR -> RELU -> LINEAR -> SIGMOID
+    # LINEAR-RELU -> LINEAR-RELU -> LINEAR-SIGMOID
     z1 = np.dot(W1, X) + b1
     a1 = relu(z1)
     z2 = np.dot(W2, a1) + b2

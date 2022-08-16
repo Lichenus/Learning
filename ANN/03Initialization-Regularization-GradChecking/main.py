@@ -24,7 +24,7 @@ train_X, train_Y, test_X, test_Y = init_utils.load_dataset(is_plot=True)
 
 def model(X, Y, learning_rate=0.01, num_iterations=15000, print_cost=True, initialization="he", is_polt=True):
     """
-    实现一个三层的神经网络：LINEAR ->RELU -> LINEAR -> RELU -> LINEAR -> SIGMOID
+    实现一个三层的神经网络：LINEAR-RELU -> LINEAR-RELU -> LINEAR-SIGMOID
 
     参数：
         X - 输入的数据，维度为(2, 要训练/测试的数量)
